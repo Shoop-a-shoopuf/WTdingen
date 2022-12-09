@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hoofdTeller = 0;// globale Variabele
+        function startderace(){   // scope       lokale   globale
+            var teller = 0;   // lokale
+            teller++;
+            hoofdTeller++;
+            console.log("er is "+ teller +" x geklikt");
+            console.log("er is "+ hoofdTeller +" x geklikt");
+
+
+            var rijtje = [5, 22, 44, 72, 14];
+            console.log(   rijtje[2]    );
+            for(var x = 0; x < rijtje.length; x++){
+                console.log("checkit "+ rijtje[x]);
+            }
+            zichVoorstellen("Piet"); // argument
+            var terug = zichVoorstellen("Marianne");
+            console.log(terug);
+        }
+        // ARGUMENT  RETURNTYPE
+        function toonTotaal(){
+            console.log(hoofdTeller);
+            var tekst = "maandag";
+            console.log(tekst.charAt(3));
+        }
+        function zichVoorstellen(naam){   // parameter 
+            console.log("Hallo ik ben "+naam )
+            return 68;   // returntype  -- Hetgeen Dat je Returned
+        }
+
+    </script>
+</head>
+<body>
+    
+    <button onclick="startderace()">start</button>
+    <button onclick="toonTotaal()">toonTotaal</button>
+
+</body>
+</html>
