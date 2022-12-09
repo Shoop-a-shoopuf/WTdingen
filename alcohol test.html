@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mijnmethode(){
+            var devoornaam = document.getElementById("invoerding").value;
+            console.log(devoornaam);                                // concateneren
+            document.getElementById("uitkomst").innerHTML = "welkom "+devoornaam;
+            // if // for
+            if(devoornaam == "joost"){
+                document.getElementById("uitkomst").innerHTML = "Hoi "+devoornaam;
+
+            }
+            for( let x = 3 ;  x  <  55  ; x += 7 ){
+                console.log("test" + x);
+                document.getElementById("uitkomst").innerHTML += "<br>Meer Tekst "+ x;
+            }
+            document.getElementById("uitkomst").style.backgroundColor = 'red';
+            alert(devoornaam + devoornaam);
+            var maakgetal = parseInt(devoornaam);
+            alert(maakgetal + maakgetal);
+            // maak een alcohol-drink-toestemming-meter  rood   geel   groen
+        }
+
+
+    </script>
+</head>
+<body>
+    this self
+    de Document   Object    Model
+    <input id="invoerding" ><button onclick="mijnmethode()">Klik hier</button>
+    <div id="uitkomst">hoi</div>
+</body>
+</html>
